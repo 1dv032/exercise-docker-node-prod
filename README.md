@@ -3,9 +3,11 @@
 In this exercise you should try to get a feeling of how to build and create a node application for production mode using docker(-composer).
 
 #First navigate to your exercise repository
+```
 git remote add docker-nodejs-prod https://github.com/1dv032/exercise-docker-node-prod/
 git subtree add --prefix=docker-nodejs-prod --squash docker-nodejs-prod master
 cd docker-nodejs-prod
+```
 You should now have a folder called docker-nodejs-dev in your exercise repo.
 
 ## The application
@@ -29,7 +31,7 @@ More information about HTTPS and node.js in production you will find below the r
 * No need to handle logs and backup in this exercise but you are free to add that
 
 ## Handling the HTTPS and node.js in production
-In a real world scenario you will have to by a certificate to run HTTPS in your own domain. In the exercise (and course) we could use so called self-signed certificates. This means that the developer self could make certificates that encrypt the traffic between server and client. This is of course not a good way to do it and your browser will probably scream when visiting the site (you have to manual proceed). This is OK for this course but you could also look into solutions like ["Lets encrypt"](https://letsencrypt.org/) - You will be needed to own a domain name to use that.
+In a real world scenario you will have to buy a certificate to run HTTPS in your own domain. In the exercise (and course) we could use so called self-signed certificates. This means that the developer self could make certificates that encrypt the traffic between server and client. This is of course not a good way to do it and your browser will probably scream when visiting the site (you have to manual proceed). This is OK for this course but you could also look into solutions like ["Lets encrypt"](https://letsencrypt.org/) - You will be needed to own a domain name to use that.
 
 To create a certificate you need to create two files a cert.pem and a key.pem. We wont go into depth on how HTTPS works but you need this files and you need to point to them in your nginx-configuration. To create this files you could run a script like this:
 
